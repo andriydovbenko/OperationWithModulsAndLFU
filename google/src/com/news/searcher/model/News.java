@@ -1,6 +1,6 @@
 package com.news.searcher.model;
 
-public enum Text {
+public enum News {
     VIRUS("China virus cases up sharply as infecrion spreads"),
     TRUMP("Trump lawyers say impeachment charges dangerous"),
     BEIRUT("Lebanon protests: Anti-government protesters clash with police"),
@@ -18,7 +18,7 @@ public enum Text {
 
     private String info;
 
-    Text(String info) {
+    News(String info) {
         this.info = info;
     }
 

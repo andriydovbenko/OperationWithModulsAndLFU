@@ -1,7 +1,7 @@
 package com.news.searcher.repository;
 
 import com.news.searcher.model.LFUCache;
-import com.news.searcher.model.Text;
+import com.news.searcher.model.News;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +16,16 @@ public class Repository {
         this.lfuList = new LFUCache(CAPACITY);
         this.checkList = new ArrayList<>(List.of("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"));
         this.allEvents = new ArrayList<>(List.of(
-                Text.VIRUS.getInfo(),
-                Text.TRUMP.getInfo(),
-                Text.BEIRUT.getInfo(),
-                Text.COFFEE.getInfo(),
-                Text.AUSTRALIA.getInfo(),
-                Text.VOLCANO.getInfo(),
-                Text.UK.getInfo(),
-                Text.RIVER.getInfo(),
-                Text.WORLD.getInfo(),
-                Text.CLIMAT.getInfo())
+                News.VIRUS.getInfo(),
+                News.TRUMP.getInfo(),
+                News.BEIRUT.getInfo(),
+                News.COFFEE.getInfo(),
+                News.AUSTRALIA.getInfo(),
+                News.VOLCANO.getInfo(),
+                News.UK.getInfo(),
+                News.RIVER.getInfo(),
+                News.WORLD.getInfo(),
+                News.CLIMAT.getInfo())
         );
     }
 
