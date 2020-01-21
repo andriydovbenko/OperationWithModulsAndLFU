@@ -46,7 +46,7 @@ public class Executor {
             inputStatus = false;
             scanner.close();
         } else if (checkList.contains(input)) {
-            System.out.println("exist");
+            System.out.println("News is added to search list");
             int item = Integer.parseInt(input) - 1;
             lfuCacheList.put(input, allEvents.get(item));
         } else {
