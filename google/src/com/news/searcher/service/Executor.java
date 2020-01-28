@@ -36,7 +36,7 @@ public class Executor {
         System.out.println("\nTo stop selecting events you need to enter: 'exit'\n");
         boolean inputStatus = true;
         while (inputStatus) {
-            String input = inputEventFromConsole();
+            String input = scanner.next();
             inputStatus = putTheEventIntoMap(input);
         }
     }
@@ -55,10 +55,6 @@ public class Executor {
             System.out.println("Incorrect input. Try again");
         }
         return inputStatus;
-    }
-
-    private String inputEventFromConsole() {
-        return scanner.next();
     }
 
     private void printFLUCacheListIntoConsole() {
