@@ -6,6 +6,7 @@ import com.news.searcher.repository.Repository;
 import java.util.*;
 
 public class Executor {
+    private static final String EXIT_KEY = "exit";
     private Scanner scanner;
     private LFUCache lfuCacheList;
     private List<String> allEvents;
@@ -35,14 +36,15 @@ public class Executor {
         System.out.println("\nTo stop selecting events you need to enter: 'exit'\n");
         boolean inputStatus = true;
         while (inputStatus) {
-            String input = inputEventFromConsole(scanner);
+            String input = inputEventFromConsole();
             inputStatus = putTheEventIntoMap(input);
         }
     }
 
     private boolean putTheEventIntoMap(String input) {
         boolean inputStatus = true;
-        if (input.equals("exit")) {
+
+        if (input.equals(EXIT_KEY)) {
             inputStatus = false;
             scanner.close();
         } else if (checkList.contains(input)) {
@@ -55,7 +57,7 @@ public class Executor {
         return inputStatus;
     }
 
-    private String inputEventFromConsole(Scanner scanner) {
+    private String inputEventFromConsole() {
         return scanner.next();
     }
 

@@ -4,11 +4,10 @@ import java.util.Objects;
 
 public class Event {
     private final String eventInformation;
-    private int frequency;
+    private int frequency = 1;
 
     public Event(String eventInformation) {
         this.eventInformation = eventInformation;
-        this.frequency = 1;
     }
 
     public String getEventInformation() {
